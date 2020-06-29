@@ -17,9 +17,11 @@ const API = {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
+      
     });
 
-    const json = await res.json();
+    const json = await res.json(data);
+    console.log(data);
 
     return json;
   },
